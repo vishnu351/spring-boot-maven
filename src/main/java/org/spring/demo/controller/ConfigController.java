@@ -12,8 +12,8 @@ public class ConfigController {
 
 	private Map<String, Object> configMap = ScaComponentFactory.getComponent();
 
-	@GetMapping("/properties/{key}")
-	public Object getConfig(@PathVariable("key") String key) {
-		return configMap.get(key);
+	@GetMapping("/welcome}")
+	public String welcome() {
+		return "hello world";
 	}
 }
